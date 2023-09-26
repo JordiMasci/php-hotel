@@ -72,7 +72,9 @@
       <th scope="row">1</th>
       <td><?php echo $hotel['name'] ?></td>
       <td>Descrizione: <?php echo $hotel['description'] ?></td>
-      <td>parcheggio: <?php echo $hotel['parking'] ?></td>
+      <td>parcheggio: <?php echo ($hotel['parking'] ? 'Presente' : 'Assente');?></td>
+
+
       <td>voto: <?php echo $hotel['vote'] ?></td>
       <td>distanza dal centro: <?php echo $hotel['distance_to_center'] ?> km</td>
     </tr>
