@@ -53,19 +53,32 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h1>Lista Hotel</h1>
-        <hr>
-        <ul>
-            <?php foreach ($hotels as $hotel): ?>
-            <li>
-                <h2><?php echo $hotel['name'] ?></h2>
-                <p>Descrizione: <?php echo $hotel['description'] ?></p>
-                <p>parcheggio: <?php echo $hotel['parking'] ?></p>
-                <p>voto: <?php echo $hotel['vote'] ?></p>
-                <p>distanza dal centro: <?php echo $hotel['distance_to_center'] ?> km</p>
-            </li>
-            <?php endforeach; ?>
-        </ul>
+        <h1 class="mb-3">Lista Hotel</h1> 
+        
+        <table class="table table-bordered ">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Descrizione</th>
+      <th scope="col">parcheggio</th>
+      <th scope="col">voto</th>
+      <th scope="col">distanza dal centro</th>
+    </tr>
+  </thead>
+  <tbody>
+  <?php foreach ($hotels as $hotel): ?>
+    <tr>
+      <th scope="row">1</th>
+      <td><?php echo $hotel['name'] ?></td>
+      <td>Descrizione: <?php echo $hotel['description'] ?></td>
+      <td>parcheggio: <?php echo $hotel['parking'] ?></td>
+      <td>voto: <?php echo $hotel['vote'] ?></td>
+      <td>distanza dal centro: <?php echo $hotel['distance_to_center'] ?> km</td>
+    </tr>
+    <?php endforeach; ?>
+  </tbody>
+</table>
     </div>
 </body>
 </html>
